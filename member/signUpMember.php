@@ -6,6 +6,7 @@ $memberId = $_POST['memberId'];
 $memberPw = $_POST['memberPw'];
 $memberPw2 = $_POST['memberPw2'];
 $memberNickName = $_POST['memberNickName'];
+$memberNickName = iconv("utf-8", "euc-kr", $memberNickName);
 $memberPhone = $_POST['memberPhone'];
 
 $sql = "SELECT * FROM dbo.member WHERE id='{$memberId}'";
@@ -20,7 +21,7 @@ if($row >=1){
   echo '<script>history.go(-1);</script>';
 }else{
   $member = "INSERT INTO dbo.member VALUES";
-  $member = $member."('$memberId','$memberNickName','$memberPw','$memberPhone')";
+  $member = $member."('$memberId',N'$memberNickName',N'$memberPw',N'$memberPhone')";
   if(sqlsrv_query($dbConnect, $member)){
     echo '<script>alert("회원가입 성공");</script>';
     echo '<script>location.href=\'./loginPage.php\';</script>';

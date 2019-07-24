@@ -73,9 +73,9 @@ if(!isset($_SESSION['ses_user'])){
 <div class="w3-row-padding">
   <div class="w3-third">
     <h2>Building</h2>
-    <h6>건물명*</h6>
+    <h6>건물명<FONT SIZE="3" COLOR="blue"> * </FONT></h6>
     <input type="text" name="buildingName"/>
-    <h6>건물주소*</h6>
+    <h6>건물주소<FONT SIZE="3" COLOR="blue"> * </FONT></h6>
     <input type="text" name="buildingAddress"/>
     <h6>준공일<FONT SIZE="2" COLOR="blue"> "ex)19990106" 와 같이 숫자만 입력해주세요 </FONT></h6>
     <input type="text" name="buildingDate"/>
@@ -95,14 +95,14 @@ if(!isset($_SESSION['ses_user'])){
   </div>
   <div class="w3-third">
     <h2>Office</h2>
-    <h6>호실 ID*</h6>
+    <h6>호실 ID<FONT SIZE="3" COLOR="blue"> * </FONT></h6>
     <input type="text" name="roomNumber" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>
-    <h6>지하 여부*</h6>
+    <h6>지하 여부<FONT SIZE="3" COLOR="blue"> * </FONT></h6>
     O <input type="radio" name="isEmpty" value="0"/>
     X <input type="radio" name="isEmpty" value="1"/>
-    <h6>층수*</h6>
+    <h6>층수<FONT SIZE="3" COLOR="blue"> * </FONT></h6>
     <input type="text" name="floor" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>
-    <h6>상호명*</h6>
+    <h6>상호명<FONT SIZE="3" COLOR="blue"> * </FONT></h6>
     <input type="text" name="company"  id="text" onkeyup="nullCheckAndRemove(this)"/>
     <h6>분야</h6>
     <select name="field">
